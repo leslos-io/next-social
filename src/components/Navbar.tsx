@@ -66,46 +66,27 @@ const Navbar = () => {
       {/* RIGHT */}
       <div className="w-[30%] flex items-center gap-4 xl:gap-8 justify-end">
         <ClerkLoading>
-          <div
-            className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-blue-500"
-            role="status"
-          >
-            <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-              Loading...
-            </span>
-          </div>
+          <div className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-gray-500 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white" />
         </ClerkLoading>
         <ClerkLoaded>
           <SignedIn>
             <div className="cursor-pointer">
-              <Image src="/people.png" alt="People" width={24} height={24} />
+              <Image src="/people.png" alt="" width={24} height={24} />
             </div>
             <div className="cursor-pointer">
-              <Image
-                src="/messages.png"
-                alt="Messages"
-                width={20}
-                height={20}
-              />
+              <Image src="/messages.png" alt="" width={20} height={20} />
             </div>
             <div className="cursor-pointer">
-              <Image
-                src="/notifications.png"
-                alt="Notifications"
-                width={20}
-                height={20}
-              />
+              <Image src="/notifications.png" alt="" width={20} height={20} />
             </div>
             <UserButton />
           </SignedIn>
-          <div className="flex items-center gap-2 text-sm">
-            <SignedOut>
-              <Image src="/login.png" alt="Login" width={20} height={20} />
-              <Link href="/sign-in" className="text-black">
-                Login/Register
-              </Link>
-            </SignedOut>
-          </div>
+          <SignedOut>
+            <div className="flex items-center gap-2 text-sm">
+              <Image src="/login.png" alt="" width={20} height={20} />
+              <Link href="/sign-in">Login/Register</Link>
+            </div>
+          </SignedOut>
         </ClerkLoaded>
         <MobileMenu />
       </div>
